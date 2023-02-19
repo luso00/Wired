@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/logo/tab_icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <title>Wired | Landing page</title>
+    <link rel="shortcut icon" href="CB-Calculator/img/fav_icon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <button id="back-to-top-btn">Back to Top</button>
+    <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+      <ul class="nav flex-column text-white w-100">
+        <a href="index.html" class="nav-link h3 text-white my-2">
+          <img src="logo/logo2.png" class="comLogo"/>
+        </a>
+        <li class="nav-link">
+          <i class="fa fa-home"></i>
+          <a href="index.html"><span class="mx-2">Home</span></a>
+        </li>
+        <li href="#" class="nav-link">
+          <i class="bx bx-user-check"></i><a href="CB-Calculator/logout_state/home/login_home/login.html"><span class="mx-2">Log-in/Sign-up</span></a>
+          
+        </li>
+        <li href="#" class="nav-link">
+          <i class="bx bx-cart-alt"></i><a href="WiredShop/shop.html"><span class="mx-2">Shop Now!</span></a>
+          
+        </li>
+        <li href="#" class="nav-link">
+            <i class="bx bx-pie-chart-alt-2"></i><a href="CB-Calculator/logout_state/home/home.html"><span class="mx-2">CB Calculator</span></a>
+            
+        </li>
+        <li href="#" class="nav-link">
+            <i class="bx bx-chat"></i><a href="CB-Calculator/logout_state/home/home.html"><span class="mx-2">Book Now!</span></a>
+        </li>
+      </ul>
+      <span href="#" class="nav-link h4 w-100 mb-5">
+        <a href=""><i class="bx bxl-instagram-alt text-white"></i></a>
+        <a href=""><i class="bx bxl-twitter px-2 text-white"></i></a>
+        <a href=""><i class="bx bxl-facebook text-white"></i></a>
+        <a href=""><i class="fa fa-pinterest-square text-white"></i></a>
+      </span>
+    </div>
+    <div class="p-1 my-container active-cont">
+      <nav class="navbar top-navbar navbar-light bg-light px-5">
+        <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+      </nav>
+      <div class="container-fluid hero">
+        <div class="row">
+            <div class="col-lg-5">
+                <div id="text-slider" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <h3>Who are we?</h3>
+                        <p>We are a leading circuit breaker company with a reputation for innovation and quality. Our mission is to provide reliable and efficient circuit breaker solutions to our clients in a variety of industries, including power generation, distribution, and industrial automation. With decades of experience and a strong commitment to customer satisfaction, we have become a trusted partner for businesses around the world.</p>
+                        <button class="butt draw-border"><a href="#">Explore for more!</a></button>
+                      </div>
+                      <div class="carousel-item">
+                        <h3>Our Products</h3>
+                        <p>Our product line includes a wide range of circuit breakers that meet the highest international standards for safety, reliability, and performance. Our engineers and technicians use cutting-edge technology and materials to design and manufacture our products, ensuring that they are up to the most demanding requirements of our customers.
+                        </p>
+                        <button class="butt draw-border"><a href="#">Check our shop!</a></button>
+                      </div>
+                      <div class="carousel-item">
+                        <h3>Our Services</h3>
+                        <p>In addition to our product offerings, we also provide a range of services to support our clients throughout the lifecycle of their circuit breaker systems. We offer expert consulting and technical support to help clients design, install, and maintain their systems. We also provide training and education to help our clients understand and operate their systems safely and efficiently.
+                        </p>
+                        <button class="butt draw-border"><a href="#">Book one of our professionals</a></button>
+                      </div>
+                      <div class="carousel-item">
+                        <h3>Our Commitment</h3>
+                        <p>We are committed to providing our clients with the best circuit breaker solutions on the market. We strive to be a reliable and trusted partner for our clients, delivering high-quality products and services that meet their unique needs. We also take our responsibility to the environment and our communities seriously, using sustainable practices and supporting local initiatives whenever possible.
+                        </p>
+                        <button class="butt draw-border"><a href="#">Visit our social media accounts!
+                        </a></button>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#text-slider" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#text-slider" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            <div class="col-lg-7">
+                <video class="vidHead"  autoplay loop muted>
+                    <source src="vidHead.mp4" type="video/mp4">
+                 </video>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+              <img class="rounded mx-auto d-block text-center gifIcon " src="logo/Calendar_Icon.gif" alt="calendarIcon">
+                <p class="text-center h2 sec2">34 Years in the Business</p>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+              <img class="rounded mx-auto d-block text-center gifIcon" src="logo/Building_Icon2.gif" alt="buildingIcon">
+                <p class="text-center h2 sec2">50,000 Projects Completed</p>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+              <img class="rounded mx-auto d-block text-center gifIcon" src="logo/Map_Icon2.gif" alt="mapIcon">
+              <p class="text-center h2 sec2">Nationwide Delivery!</p>
+            </div> 
+          </div>
+      </div>
+      <section>
+        <div class="container-fluid sec7">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="text-end">Industries we serve.</h1>
+              <p class="text-end"><a href="#services">VIEW PROJECTS</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic1.jpg" alt="bldgPic1" class="image">
+                    <div class="overlay">
+                      <p class="caption">Healthcare</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic2.jpg" alt="bldgPic2" class="image">
+                    <div class="overlay">
+                      <p class="caption">Corporate</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic3.jpg" alt="bldgPic3" class="image">
+                    <div class="overlay">
+                      <p class="caption">Commercial</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic4.jpg" alt="bldgPic4" class="image">
+                    <div class="overlay">
+                      <p class="caption">Government</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic5.jpg" alt="bldgPic8" class="image">
+                    <div class="overlay">
+                      <p class="caption">Entertainment</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic6.jpg" alt="bldgPic9" class="image">
+                    <div class="overlay">
+                      <p class="caption">Corporate</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic7.jpg" alt="bldgPic10" class="image">
+                    <div class="overlay">
+                      <p class="caption">Religious Sector</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic8.jpg" alt="bldgPic14" class="image">
+                    <div class="overlay">
+                      <p class="caption">Family</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec7/b7_pic9.jpg" alt="bldgPic17" class="image">
+                    <div class="overlay">
+                      <p class="caption">Emergency Services</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="container-fluid sec8">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+              <img class="rounded mx-auto d-block text-center" src="sec8/gears.png" alt="gearIcon">
+                <p class="text-center"><b>Full-Service Firm</b><br>
+                    Our expanded capabilities and team expertise help us provide the best service.</p>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+              <img class="rounded mx-auto d-block text-center" src="sec8/frames.png" alt="framesIcon">
+                <p class="text-center"><b>Creative & Cutting-Edge</b><br>
+                    We blend modern techniques and classic knowledge to create truly unique designs.</p>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+              <img class="rounded mx-auto d-block text-center" src="sec8/chat.png" alt="chatIcon">
+              <p class="text-center"><b>Customized Approach</b><br>
+                We listen to your needs, goals, and vision first to help us build the right solution.</p>
+            </div> 
+          </div>
+    </div>
+    <section>
+        <div class="container-fluid sec7">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="text-end">Wide array of products to choose from!</h1>
+              <p class="text-end"><a href="#services">VIEW PROJECTS</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/1.jpg" alt="bldgPic1" class="image">
+                    <div class="overlay">
+                      <p class="caption">Single-Pole Breaker</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/2.jpg" alt="bldgPic2" class="image">
+                    <div class="overlay">
+                      <p class="caption">Single-Pole Breaker</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/3.jpg" alt="bldgPic3" class="image">
+                    <div class="overlay">
+                      <p class="caption">Single-Pole Breaker</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/4.jpg" alt="bldgPic4" class="image">
+                    <div class="overlay">
+                      <p class="caption">Double-Pole Breaker</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/5.jpg" alt="bldgPic8" class="image">
+                    <div class="overlay">
+                      <p class="caption">Double-Pole Breaker</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/6.jpg" alt="bldgPic9" class="image">
+                    <div class="overlay">
+                      <p class="caption">Double-Pole Breaker</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/7.jpg" alt="bldgPic10" class="image">
+                    <div class="overlay">
+                      <p class="caption">GFCI</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/8.jpg" alt="bldgPic14" class="image">
+                    <div class="overlay">
+                      <p class="caption">GFCI</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="thumbnail">
+                <div class="img-container">
+                   <img src="sec9/9.png" alt="bldgPic17" class="image">
+                    <div class="overlay">
+                      <p class="caption">GFCI</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                  <div class="img-container">
+                     <img src="sec9/10.jpg" alt="bldgPic10" class="image">
+                      <div class="overlay">
+                        <p class="caption">AFCI</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                  <div class="img-container">
+                     <img src="sec9/11.jpg" alt="bldgPic14" class="image">
+                      <div class="overlay">
+                        <p class="caption">AFCI</p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                  <div class="img-container">
+                     <img src="sec9/12.jpg" alt="bldgPic17" class="image">
+                      <div class="overlay">
+                        <p class="caption">AFCI</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                  <div class="img-container">
+                     <img src="sec9/13.png" alt="bldgPic17" class="image">
+                      <div class="overlay">
+                        <p class="caption">Dual-Function Breaker</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                  <div class="img-container">
+                     <img src="sec9/14.jpg" alt="bldgPic17" class="image">
+                      <div class="overlay">
+                        <p class="caption">Dual-Function Breaker</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                  <div class="img-container">
+                     <img src="sec9/15.jpg" alt="bldgPic17" class="image">
+                      <div class="overlay">
+                        <p class="caption">Dual-Function Breaker</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid sec10">
+        <div class="row">
+            <div class="col-lg-6">
+                <figure class="snip1197">
+                    <figcaption>
+                      <blockquote>"I have have been extremely satisfied with their performance." - Maria O.<br>
+                        <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                        <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                        <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                        <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                        <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                      </blockquote>
+                    </figcaption>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample10.jpg" alt="sq-sample10"/>
+                  </figure>
+            </div>
+            <div class="col-lg-6">
+                <figure class="snip1197 hover">
+                    <figcaption>
+                      <blockquote>The circuit breakers from this company are some of the best I have come across. - Cesar M.<br>
+                            <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                            <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                            <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                            <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                            <i class="fa fa-star" style="font-size:20px;color:orange"></i>
+                      </blockquote>
+                    </figcaption>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample33.jpg" alt="sq-sample33"/>
+                  </figure>
+            </div>
+        </div>
+    </div>
+      <div class="container-fluid call2action">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Great deals wait ahead!!<br><a href="#" class="shopNow"><span>Shop Now!</a></h1>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-google"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Company name
+          </h6>
+          <p>
+            WIRED Electrical Sales, Service and Spareparts
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Shop</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Book</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">CB Calculator</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> Earth, Solar System 10012, Universe</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="#">EJ, JK, CJ</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+      </div>
+    </div>
+    <script>
+      var menu_btn = document.querySelector("#menu-btn");
+      var sidebar = document.querySelector("#sidebar");
+      var container = document.querySelector(".my-container");
+      menu_btn.addEventListener("click", () => {
+        sidebar.classList.toggle("active-nav");
+        container.classList.toggle("active-cont");
+      });
+      var backToTopBtn = document.getElementById("back-to-top-btn");
+    window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+
+backToTopBtn.onclick = function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+    </script>
+  </body>
+</html>

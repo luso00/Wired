@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | CB Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script type="text/javascript" src="home_js/home.js"></script>
+    <link
+      rel="shortcut icon"
+      href="../../img/fav_icon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- nav bar section -->
+    <div class="navbar1">
+      <nav class="navbar navbar-expand-lg" id="">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html"
+            ><img
+              src="../../img/cb_favicon.jpg"
+              alt="Circuit Breaker"
+              width="50px"
+              height="50px"
+            />
+            CB Calculator
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon" id="burgermenu"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../important_terms_and_table/ITT.html"
+                  >Important Terms and Table</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../calculations/calculations.html"
+                  >Calculations</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../logout_state/home/home.html"
+                  id="state"
+                  onclick="logout()"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex justify-content-end">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+              />
+              <button class="search btn btn-outline" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- end of navbar section -->
+    <!-- Available services -->
+    <div>
+      <h1 id="service_header">Available Services</h1>
+      <ul id="Services">
+        <li class="availableService">Recessed Can Lights</li>
+        <li class="availableService">Accent Lights</li>
+        <li class="availableService">Service Calls</li>
+        <li class="availableService">Troubleshooting</li>
+        <li class="availableService">Repairs</li>
+        <li class="availableService">New Builds</li>
+        <li class="availableService">Remodels</li>
+        <li class="availableService">New Switches</li>
+        <li class="availableService">Outlets</li>
+        <li class="availableService">Circuits</li>
+        <li class="availableService">Lighting</li>
+        <li class="availableService">Fan Prewiring</li>
+        <li class="availableService">Installation</li>
+      </ul>
+    </div>
+    <!-- end of Available services -->
+    <!-- Booking Registration -->
+    <div class="container">
+      <div class="title"><h1 id="Booking">Booking Registration</h1></div>
+      <div class="content">
+        <form
+          action="https://script.google.com/macros/s/AKfycbwxCdsw_kDx_qBqCnLiJnngbhC1GBY-n1Zxh-DRr4Q14DSKBSklhmmJSegZYzEnErJHAQ/exec"
+          method="post"
+        >
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input
+                type="text"
+                name="Full name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                type="email"
+                name="Email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                type="text"
+                name="Phone no."
+                placeholder="Enter your number"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Address</span>
+              <input
+                type="text"
+                name="Address"
+                placeholder="Enter your full address"
+                required
+              />
+            </div>
+          </div>
+          <div class="gender-details">
+            <span class="gender-title">Gender:</span>
+            <input
+              type="radio"
+              name="Gender"
+              id="male"
+              value="Male"
+              required
+            /><label for="male">Male</label>
+            <input type="radio" name="Gender" id="female" required /><label
+              for="female"
+              >Female</label
+            >
+            <input type="radio" name="Gender" id="not_to_say" required /><label
+              for="not_to_say"
+              >Prefer not to say</label
+            >
+          </div>
+          <div class="services-details">
+            <div class="input-box">
+              <span class="details">Date of booking:</span>
+              <input type="date" name="Date Booked" min="2000-01-02" required />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="Service1"
+                value="Recessed Can Lights"
+              /><label for="Service1">Recessed Can Lights </label>
+              <input
+                type="checkbox"
+                name="Service2"
+                value="Accent Lights"
+              /><label for="Service2">Accent Lights </label>
+              <input
+                type="checkbox"
+                name="Service3"
+                value="Service Calls"
+              /><label for="Service3">Service Calls </label>
+              <input
+                type="checkbox"
+                name="Service4"
+                value="Troubleshooting"
+              /><label for="Service4">Troubleshooting </label>
+              <input type="checkbox" name="Service5" value="Repairs" /><label
+                for="Service5"
+                >Repairs</label
+              >
+              <input type="checkbox" name="Service6" value="New Builds" /><label
+                for="Service6"
+                >New Builds
+              </label>
+              <input type="checkbox" name="Service7" value="Remodels" /><label
+                for="Service7"
+                >Remodels</label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="Service8"
+                value="New Switches"
+              /><label for="Service8">New Switches </label>
+              <input type="checkbox" name="Service9" value="Outlets" /><label
+                for="Service9"
+                >Outlets</label
+              >
+              <input type="checkbox" name="Service10" value="Circuits" /><label
+                for="Service10"
+                >Circuits</label
+              >
+              <input type="checkbox" name="Service11" value="Lighting" /><label
+                for="Service11"
+                >Lighting</label
+              >
+              <input
+                type="checkbox"
+                name="Service12"
+                value="Fan Prewiring"
+              /><label for="Service12">Fan Prewiring </label>
+              <input
+                type="checkbox"
+                name="Service13"
+                value="Installation"
+              /><label for="Service13">Installation </label>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" onclick="popup()" value="Book Now" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end of Booking registration  -->
+    <!--footer lg-->
+    <footer id="footer" class="d-none d-lg-block w3-animate-opacity">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 d-none d-lg-block">
+            <div class="container-fluid">
+              <a href="../../../index.html"
+                ><img src="../../img/logo.png" alt="" class="image-fluid"
+              /></a>
+            </div>
+            <!-- contact us -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Contact Us
+            </button>
+            <!-- Modal -->
+            <form
+              method="post"
+              action="https://script.google.com/macros/s/AKfycbxBPraRBRWPBm3NpKoacPZLRp_1BMtCo3H_pYcgdrjyPT7-8gFf1ZQ5mxPUNsV8wqfhyw/exec"
+            >
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Contact Information
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div>
+                            <label for="First Name">First Name:</label>
+                            <input
+                              type="text"
+                              name="First Name"
+                              placeholder="Juan"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Last Name">Last Name:</label>
+                            <input
+                              type="text"
+                              name="Last Name"
+                              placeholder="dela Cruz"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Email">Email:</label>
+                            <input
+                              type="email"
+                              name="Email"
+                              placeholder="Enter your email"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Phone no.">Phone no:</label>
+                            <input
+                              type="text"
+                              name="Phone no."
+                              placeholder="09123456"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Address">Address:</label>
+                            <input
+                              type="text"
+                              name="Address"
+                              placeholder="Manila"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Message">Message:</label>
+                            <input
+                              type="text"
+                              name="Message"
+                              placeholder="Message"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- end of contact us -->
+            <div class="text-center">
+              <a href="https://www.facebook.com/"
+                ><img src="../../img/logo-facebook.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.twitter.com/"
+                ><img src="../../img/logo-twitter.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.instagram.com/"
+                ><img src="../../img/logo-instagram.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.pinterest.ph/"
+                ><img src="../../img/logo-pinterest.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.linkedin.com/"
+                ><img src="../../img/logo-linkedin.svg" alt="" class="icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="copyright">
+          <div class="col-12 text-center">
+            <p>Copyright © 2023 CB Calculator. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--end of footer lg-->
+  </body>
+</html>

@@ -1,0 +1,60 @@
+1 = Schneider Electric HOMT2020230CP Square D Homeline, Double Pole Combination Tandem Circuit Breaker, Black
+$37.95
+2 = GE Plug in Circuit Breaker, THQL, Number of Poles 2, 20 Amps, 120/240VAC, Standard
+$23.64
+3 = EATON BR240 Type BR Circuit Breaker, 120/240 VAC, 40 A, 10 kA, 2 Poles, Common/Thermal Magnetic Trip
+$18.68
+4 = Square D HomeLine 30 amps Surge 2-Pole Circuit Breaker
+$21.99
+5 = Q250 50-Amp Double Pole Type QP Circuit Breaker
+$16.96
+6 = UBIP230-New Pushmatic P230 Replacement. Two Pole 30 Amp Circuit Breaker Manufactured by Connecticut Electric.
+$50.31
+7 = Connecticut Electric UBIZ240 Newly Manufactured Zinsco QC40 Replacement Circuit Breaker, Two Pole 40 Amp Thick Series, Gray
+$66.45
+8 = Connecticut Electric UBIF0250N-New Federal Pacific Electric Stab-Lok NC250 Replacement Two Pole 50 Amp Thin Series Circuit Breaker.
+$50.01
+9 = Leviton LB230-T 30A 2-Pole Plug-On Standard Branch Circuit Breaker, Thermal Magnetic, 120/240 VAC, White
+$19.08
+10 = Q230 30-Amp Double Pole Type QP Circuit Breaker
+$16.05
+11 = Siemens -HI Q225 25-Amp Double Pole Type QP Circuit Breaker black
+$22.39
+12 = Q235 35-Amp Double Pole Type QP Circuit Breaker
+$16.81
+13 = SIEMENS Q240 40-Amp Double Pole Type QP Circuit Breaker black
+$16.11
+14 = Q245 45-Amp Double Pole Type QP Circuit Breaker
+$14.67
+15 = Q270 70-Amp Double Pole Type QP Circuit Breaker
+$32.00
+16 = Q280 80-Amp Double Pole Type QP Circuit Breaker
+$46.33
+17 = Q290 90-Amp Double Pole Type QP Circuit Breaker
+$38.00
+18 = Q2100 100-Amp Double Pole Type QP Circuit Breaker
+$39.50
+19 = GE Plug in Circuit Breaker, THQL, Number of Poles 2, 30 Amps, 120/240VAC, Standard
+$22.41
+20 = Square D HOM260 Plug-In Circuit Breaker, 60 Amp, 2-Pole
+$27.00
+21 = CH225 2-Pole 25-Amp Circuit Breaker, Type CH 3/4-Inch Plug-On Molded Case Circuit Breaker, Thermal Magnetic Protection, 10 KAIC, 120/240V, Fit for Cutler Hammer Load Centers (3 Years Warranty)
+$29.99
+22 = CH250 2-Pole 50-Amp Circuit Breaker, Type CH 3/4-Inch Plug-On Molded Case Circuit Breaker, Thermal Magnetic Protection, 10 KAIC, 120/240V, Fit for Cutler Hammer Load Centers (3 Years Warranty)
+$34.99
+23 = Square D HOM230 Circuit Breaker 1/pkg 30A 120/240V 2P 10kAIC
+$16.32
+24 = QO250 50 Amp 2-Pole Circuit Breaker for Square D, QO250CP Miniature Circuit Breaker with Visi-Trip Indicator, 120/240V, 10 kAIC (3 Year Warranty)
+$24.99
+25 = Square D - HOM2100CP Homeline 100-Amp Two-Pole Circuit Breaker
+$47.24
+26 = QO260 60 Amp 2-Pole Circuit Breaker for Square D, QO260CP Miniature Circuit Breaker with Visi-Trip Indicator, 120/240V, 10 kAIC (3 Year Warranty)
+$28.99
+27 = Eaton CH260 Plug-On Mount Type CH Circuit Breaker 2-Pole 60 Amp 120/240 Volt AC
+$77.03
+28 = DC Miniature Circuit Breaker, 2 Pole 1000V 63 Amp Isolator for Solar PV System, Thermal Magnetic Trip, DIN Rail Mount, Chtaixi DC Disconnect Switch C63
+$15.98
+29 = Square D - HOM2100CP Homeline 100-Amp Two-Pole Circuit Breaker
+$47.24
+30 = Cutler Hammer CH230 2-Pole 30-Amp Circuit Breaker
+$27.82

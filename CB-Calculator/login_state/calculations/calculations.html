@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script src="calculations_js/calculations.js"></script>
+    <link
+      rel="shortcut icon"
+      href="../../img/fav_icon.png"
+      type="image/x-icon"
+    />
+    <title>Calculations | CB Calculator</title>
+  </head>
+  <body>
+    <!-- nav bar section -->
+    <div class="navbar1">
+      <nav class="navbar navbar-expand-lg" id="">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../home/home.html"
+            ><img
+              src="../../img/cb_favicon.jpg"
+              alt="Circuit Breaker"
+              width="50px"
+              height="50px"
+            />
+            CB Calculator
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon" id="burgermenu"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="../home/home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../important_terms_and_table/ITT.html"
+                  >Important Terms and Table</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calculations.html">Calculations</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../logout_state/calculations/calculations.html"
+                  id="logout_entry"
+                  onclick="logout()"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex justify-content-end">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+              />
+              <button class="search btn btn-outline" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- end of navbar section -->
+    <!-- calculation form -->
+    <div class="alert hide">
+      <span class="fas fa-exclamation-circle"></span>
+      <span class="msg">Fill in all entries!</span>
+      <div class="close-btn">
+        <span class="fas fa-times"></span>
+      </div>
+    </div>
+    <div class="alert2 hide">
+      <span class="fas fa-exclamation-circle"></span>
+      <span class="msg2">Invalid power rating value!</span>
+      <div class="close-btn2">
+        <span class="fas fa-times"></span>
+      </div>
+    </div>
+    <div class="alert3 hide">
+      <span class="fas fa-exclamation-circle"></span>
+      <span class="msg3">Invalid power factor value!</span>
+      <div class="close-btn3">
+        <span class="fas fa-times"></span>
+      </div>
+    </div>
+    <div class="alert4 hide">
+      <span class="fas fa-exclamation-circle"></span>
+      <span class="msg4">Fill in all entries!</span>
+      <div class="close-btn4">
+        <span class="fas fa-times"></span>
+      </div>
+    </div>
+    <div>
+      <h1 id="calculation">Calculations</h1>
+    </div>
+    <div>
+      <form id="final-data-input">
+        <div class="row">
+          <div class="col-lg-6">
+            <div>
+              <h3>Load Description</h3>
+              <p>
+                <i
+                  >(Name the load. i.e. L.E.D., CFL, convenience outlet,
+                  waterpump, A.C.U. etc..)</i
+                >
+              </p>
+              <input
+                type="text"
+                placeholder="L.E.D."
+                id="load_description"
+                required
+              />
+            </div>
+            <div>
+              <h3>Type of Load</h3>
+              <p><i>(Electrical appliances or devices used.)</i></p>
+              <input
+                type="radio"
+                name="type_of_load"
+                id="resistive_load"
+                checked
+              /><label for="resistive_load">Resistive Load</label>
+              <p><i>Specify if:</i></p>
+              <div>
+                <input
+                  type="radio"
+                  name="resistive"
+                  id="receptacle"
+                  checked
+                /><label for="resistive_load">Receptacle</label>
+                <input type="radio" name="resistive" id="co" /><label
+                  for="resistive_load"
+                  >Convenience Outlet</label
+                >
+              </div>
+              <div>
+                <input type="radio" name="type_of_load" id="acwp" /><label
+                  for="acwp"
+                  >Air Conditioning & Water Pumps</label
+                >
+              </div>
+              <div>
+                <input type="radio" name="type_of_load" id="welder" /><label
+                  for="welder"
+                  >Welders</label
+                >
+              </div>
+              <div>
+                <input type="radio" name="type_of_load" id="motor" /><label
+                  for="motor"
+                  >Motors</label
+                >
+              </div>
+            </div>
+            <div>
+              <h3>Number of Loads</h3>
+              <p><i>(Specify the quantity of the loads.) </i></p>
+              <input
+                type="number"
+                id="number_of_loads"
+                placeholder="0"
+                min="0"
+                max="100"
+                required
+              /><label for="number_of_loads"><b>pcs</b></label>
+            </div>
+            <div>
+              <h3>Power Rating</h3>
+              <p><i>(Specify rating if HP or watts.)</i></p>
+              <input
+                type="number"
+                id="power_rating"
+                placeholder="0"
+                min="0"
+                max="3000"
+                required
+              />
+              <input type="radio" name="power" id="watts" checked /><label
+                for="watts"
+                ><b>Watts</b></label
+              >
+              <input type="radio" name="power" id="hp" /><label for="hp"
+                ><b>HP</b></label
+              >
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div>
+              <h3>Voltage Rating</h3>
+              <p><i>(Specify voltage rating.)</i></p>
+              <input
+                type="number"
+                placeholder="0"
+                id="voltage_rating"
+                min="0"
+                max="240"
+                required
+              /><label for="voltage"><b>volts</b></label>
+            </div>
+            <div>
+              <h3>Power Factor</h3>
+              <p>
+                <i
+                  >(Note: p.f. in is found in the machine specifications. For
+                  resistive loads, p.f. is 100%. Input p.f. in unit.)</i
+                >
+              </p>
+              <input
+                type="number"
+                id="power_factor"
+                placeholder="0"
+                min="0"
+                max="1"
+              /><label for="power_factor"></label>
+            </div>
+            <div>
+              <h3>Safety Factor</h3>
+              <a href="../important_terms_and_table/ITT.html" target="_blank"
+                ><p><i>(Note: See Safety Factor Table.)</i></p></a
+              >
+              <select name="safety_factor" id="safety_factor" required>
+                <option disabled selected>Select one</option>
+                <option value=".25">25%</option>
+                <option value=".75">75%</option>
+                <option value="1">100%</option>
+              </select>
+            </div>
+            <div>
+              <h3>No. of branch circuit: <span id="ckt_count">0</span></h3>
+            </div>
+            <!-- clear all button -->
+            <button
+              type="button"
+              class="btn btn-warning text-light"
+              data-bs-toggle="modal"
+              data-bs-target="#clearSessionStorage"
+            >
+              Clear All
+            </button>
+            <div class="modal fade" id="clearSessionStorage" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Clear all previously entered branch circuit?
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="reset"
+                      class="btn btn-danger"
+                      onclick="clearStorage()"
+                      data-bs-dismiss="modal"
+                      id="clr_all_data"
+                    >
+                      Clear All
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of clear all button -->
+            <button
+              type="reset"
+              class="btn btn-secondary bg-danger"
+              data-bs-toggle="reset"
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary text-light"
+              data-bs-toggle="modal"
+              data-bs-target="#submit-modal"
+            >
+              Submit
+            </button>
+            <div class="modal fade" id="submit-modal" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                    ></button>
+                  </div>
+                  <div class="modal-body">Add another branch circuit?</div>
+                  <div class="modal-footer">
+                    <button
+                      type="reset"
+                      class="btn btn-danger add-data"
+                      data-bs-dismiss="modal"
+                      id="add_branch_ckt"
+                    >
+                      Add
+                    </button>
+                    <button
+                      type="submit"
+                      class="btn btn-primary add-data"
+                      data-bs-dismiss="modal"
+                      id="create_schedule"
+                    >
+                      Create Schedule of Loads
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- end of calculation form -->
+    <!--footer lg-->
+    <footer id="footer" class="d-none d-lg-block w3-animate-opacity">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 d-none d-lg-block">
+            <div class="container-fluid">
+              <a href="../../../index.html"
+                ><img src="../../img/logo.png" alt="" class="image-fluid"
+              /></a>
+            </div>
+            <!-- contact us -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Contact Us
+            </button>
+            <!-- Modal -->
+            <form
+              method="post"
+              action="https://script.google.com/macros/s/AKfycbxBPraRBRWPBm3NpKoacPZLRp_1BMtCo3H_pYcgdrjyPT7-8gFf1ZQ5mxPUNsV8wqfhyw/exec"
+            >
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Contact Information
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div>
+                            <label for="First Name">First Name:</label>
+                            <input
+                              type="text"
+                              name="First Name"
+                              placeholder="Juan"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Last Name">Last Name:</label>
+                            <input
+                              type="text"
+                              name="Last Name"
+                              placeholder="dela Cruz"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Email">Email:</label>
+                            <input
+                              type="email"
+                              name="Email"
+                              placeholder="Enter your email"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Phone no.">Phone no:</label>
+                            <input
+                              type="text"
+                              name="Phone no."
+                              placeholder="09123456"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Address">Address:</label>
+                            <input
+                              type="text"
+                              name="Address"
+                              placeholder="Manila"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label for="Message">Message:</label>
+                            <input
+                              type="text"
+                              name="Message"
+                              placeholder="Message"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- end of contact us -->
+            <div class="text-center">
+              <a href="https://www.facebook.com/"
+                ><img src="../../img/logo-facebook.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.twitter.com/"
+                ><img src="../../img/logo-twitter.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.instagram.com/"
+                ><img src="../../img/logo-instagram.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.pinterest.ph/"
+                ><img src="../../img/logo-pinterest.svg" alt="" class="icon"
+              /></a>
+              <a href="https://www.linkedin.com/"
+                ><img src="../../img/logo-linkedin.svg" alt="" class="icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="copyright">
+          <div class="col-12 text-center">
+            <p>Copyright © 2023 CB Calculator. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--end of footer lg-->
+  </body>
+</html>
