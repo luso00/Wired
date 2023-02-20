@@ -1,0 +1,267 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Example Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <link rel="stylesheet" href="purchase.css">
+    <script>
+  $(document).ready(function() {
+        // Get the cart item from local storage
+    var cartItem = JSON.parse(localStorage.getItem('cartItem'));
+
+      // If a cart item exists, update the image and price
+      if (cartItem) {
+        // Update the cart display with the item details
+        var name = cartItem.name;
+        var price = cartItem.price;
+        var imageSrc = cartItem.src;
+        var sku = cartItem.sku;
+        var counter = 1;
+        $('#image').append('<img src="' + imageSrc  + '" >');
+        $(".param").append("<p>" + name + "</p>")
+        $(".price").append("<p>$" + price + "</p>")
+        $("#sku").append("<p> SKU: " + sku + "</p>")
+        $(".list-group1").append("<div>" + '<img src="' + imageSrc  + '" >' + "<p class='price'>" +"$"+ price + "</p>"  + name + '<p id="total">Total:'+ price +'</p>')
+
+        // Attach an event listener to the "Add to Cart" button
+        $("#button").click(function() {
+            // Increment the cart count
+            var cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+            cartCount++;
+            localStorage.setItem('cartCount', cartCount);
+
+            // Get the cart items array from local storage or create a new one if it doesn't exist
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Get the cart item details
+            var name = cartItem.name;
+            var price = cartItem.price;
+            var imageSrc = cartItem.src;
+            var sku = cartItem.sku;
+
+            // Add the new cart item to the cart items array
+            cartItems.push({
+              name: name,
+              price: price,
+              src: imageSrc,
+              sku: sku
+            });
+
+            // Save the updated cart items array to local storage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Display the cart count and items
+            $(".cart-count").text(cartCount);
+
+            $(document).ready(function() {
+                  var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                  var cartTotal = parseFloat(localStorage.getItem('cartTotal')) || 0;
+
+                  // Add each cart item to the list
+                  for (var i = 0; i < cartItems.length; i++) {
+                    addItemToList(cartItems[i]);
+                  }
+
+                  // Update the cart total
+                  updateCartTotal();
+
+                  // Add event listener to clear cart button
+                  $(".clear-cart").on("click", function() {
+                    // Clear the cart items array and local storage
+
+                    cartItems = [];
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    localStorage.setItem('cartTotal', 0);
+
+                    // Remove all items from the list and update the cart total
+                    $(".listForm").empty();
+                    $(".cart-total").text("0.00");
+                  });
+
+              // Helper function to add an item to the list
+              function addItemToList(item) {
+                  var listItem = $("<li>");
+                  var itemHtml = "<img src='" + item.src + "'><div>" + item.name + "<br>" + item.sku + "<br>Price: $" + item.price + "</div>";
+                  var quantityHtml = "<div>Quantity: <button class='minus'>-</button> <span class='quantity'>" + 0 + "</span> <button class='plus'>+</button></div>";
+                  var totalHtml = "<div>Total Price: $<span class='total-price'>" + (item.price * 1).toFixed(2) + "</span></div>";
+                  listItem.html(itemHtml + quantityHtml + totalHtml);
+
+                  var cartItem = JSON.parse(localStorage.getItem('cartItems')).find(function(element) {
+                    return element.sku === item.sku;
+                  });
+                  if (cartItem) {
+                    item.quantity = cartItem.quantity;
+                  } else {
+                    item.quantity = 0;
+                  }
+                  
+                  // Add remove button
+                  var removeButton = $("<button>");
+                  removeButton.text("Remove");
+                  removeButton.data("index", cartItems.indexOf(item)); // store item index as data attribute
+
+                  // Add click event listener to remove button
+                  removeButton.on("click", function() {
+                    // Retrieve the item index from the remove button data attribute
+                    var index = removeButton.data("index");
+
+                    // Remove the item from the cartItems array and local storage
+                    cartItems.splice(index, 1);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    
+
+                    // Update the cart total and remove the list item from the list form
+                    var total = item.price * item.quantity;
+                    cartTotal -= total;
+                    localStorage.setItem('cartTotal', cartTotal);
+                    updateCartTotal();
+                    listItem.remove();
+                  });
+
+                  // Add the remove button to the list item
+                  listItem.append(removeButton);
+                              
+                  // Append the list item to the list form
+                  $(".listForm").append(listItem);
+
+                  // Add click event listeners to plus and minus buttons
+                  var quantityEl = listItem.find(".quantity");
+                  var totalEl = listItem.find(".total-price");
+                  var plusButton = listItem.find(".plus");
+                  var minusButton = listItem.find(".minus");
+
+                  plusButton.on("click", function() {
+                    // Increment the quantity
+                    var quantity = parseInt(quantityEl.text());
+                    quantity++;
+                    item.quantity = quantity;
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    quantityEl.text(quantity);
+                    // Update the total price and cart total
+                    var price = parseFloat(item.price);
+                    var total = price * quantity;
+                    cartTotal += price;
+                    localStorage.setItem('cartTotal', cartTotal);
+                    totalEl.text(total.toFixed(2));
+                    updateCartTotal();
+                    localStorage.setItem("quantity", quantity);
+                  });
+
+                  minusButton.on("click", function() {
+                    // Decrement the quantity, but not below 1
+                    var quantity = parseInt(quantityEl.text());
+                    if (quantity > 1) {
+                      quantity--;
+                      item.quantity = quantity;
+                      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                      quantityEl.text(quantity);
+                      // Update the total price and cart total
+                      var price = parseFloat(item.price);
+                      var total = price * quantity;
+                      cartTotal -= price;
+                      localStorage.setItem('cartTotal', cartTotal);
+                      totalEl.text(total.toFixed(2));
+                      updateCartTotal();
+                    }
+                  });
+                }
+                      // Helper function to update the cart total
+                      function updateCartTotal() {
+                        $(".badge").text(cartTotal.toFixed(2));
+                        }
+                      });
+            });
+                  
+                $("#addToCartButton").click(function() {
+              // get the cart items
+              var cartItems = JSON.parse(localStorage.getItem("cartItems"));
+              var cartItems = JSON.parse(localStorage.getItem("cartItems"));
+              var firstItem = cartItems[0];
+
+              var name = firstItem.name;
+              var price = firstItem.price;
+              var sku = firstItem.sku;
+              var cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
+              var quantity = localStorage.getItem("quantity", quantity);
+
+              quantity = parseInt(quantity);
+              $("#p6").append("<input name='Name' type='text' value='" + name +"' required id='p1' />" + "<input name='Price' type='text' value='" + "$" +price +"' required id='p2' />" + "<input name='Quantity' type='text' value='" + quantity +"' required id='p3' />" + "<input name='Sku' type='text' value='" + sku +"' required id='p4' />" + "<input name='TotalPrice' type='text' value='" + "$" +cartTotal +"' required id='p5' />")
+
+            });
+
+
+            $('.removeCartItem').click(function() {
+              localStorage.removeItem('cartItem');
+              localStorage.removeItem('cartCount');
+
+              location.reload(); // Refresh the page to clear the cart item display
+            });
+          }
+              });
+
+
+              $("#top2").click(function(){
+                  window.location.href = "shop.html";
+                });
+                $(document).ready(function() {
+
+                  $("#cart-icon").click(function() {
+                    $("#mySidenav").css("width", "35%");
+                    $("#mySidenav").css("opacity", "100%");
+                  });
+              
+                  $(".closebtn").click(function() {
+                $("#mySidenav").css("width", "0");
+                $("#mySidenav").css("opacity", "100%");
+              });
+            });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="cart-icon">
+      <i class="fa fa-shopping-cart"></i>
+    </a>
+    <a href="shop.html"id="top2">Shop</a>
+    <div id="image"></div>
+    <div class="param"></div>
+    <div class="price"></div>
+    <div id="sku"></div>
+
+      <div class="list-group1">
+      </div>
+      <div>
+        <button id="button" style="margin-left: 3em;">addtoCart</button>
+      </div>
+    <div id="mySidenav" class="sidenav" style="opacity: 0%;">
+      <a href="javascript:void(0)" class="closebtn" >&times;</a>
+      <h4 class="text-center my-4">Shopping Cart</h4>
+      <div class="p-4">
+        
+        <ul class="listForm">
+        </ul>
+        <hr>
+        <button class="removeCartItem">&#x2716;</button>
+        <h5 class="text-center mt-4">Total: $ <span class="badge badge-secondary"></span></h5>
+        <div class="text-center mt-4">
+        </div>
+          
+      <form method="POST" action="https://script.google.com/macros/s/AKfycbwN2mHPVtuRMj5nieYiXRDSzQx-bQT00RbxMJpzXtoYb97SHost5dYNcj5OxAOeodkGCQ/exec " id="p6">
+        <button id="addToCartButton" type="submit" >Check-Out</button>
+      </form>
+      </div>
+    </div>
+    
+  </body>
+  </html>
+
+

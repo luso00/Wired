@@ -1,0 +1,60 @@
+1 = LENKRAD A-Series Red Toggle Circuit Breaker - Single Pole 50A
+$19.99
+2 = GE Plug in Circuit Breaker, THQL, Number of Poles 1, 30 Amps, 120/240VAC, Standard
+$16.30
+3 = Square D by Schneider Electric HOM120CP Homeline 20 Amp Single-Pole Circuit Breaker
+$26.45
+4 = Q120 20-Amp Single Pole Type QP Circuit Breaker
+$23.54
+5 = SIEMENS SIEQ125 SIE Q125 SP 25A 120/240V CB, 25 Amp, Black
+$12.05
+6 = SIEMENS SIEQ125 SIE Q125 SP 25A 120/240V CB, 25 Amp, Black
+$15.14
+7 = SIEMENS SIEQ160 SIE Q160 SP 60A 120/240V CB, 60 Amp, Black
+$17.31
+8 = Connecticut Electric UBIP-115, One Pole 15 Amp
+$29.65
+9 = Connecticut Electric UBIP120-New Pushmatic P120 Replacement. One Pole 20 Amp Circuit Breaker, Gray
+$29.57
+10 = UBIP230-New Pushmatic P230 Replacement. One Pole 30 Amp Circuit Breaker Manufactured by Connecticut Electric.
+$50.31
+11 = UBIA20NI-New Wadsworth Type A Replacement.1 Pole 20 Amp Circuit Breaker Manufactured by Connecticut Electric , Grey
+$56.61
+12 = Leviton LB120-T 20A 1-Pole Plug-On Standard Branch Circuit Breaker, Thermal Magnetic, 120 VAC, White
+$9.78
+13 = Square D Schneider Electric, QO120, Circuit Breaker 1P 20A, Black
+$13.99
+14 = Square D by Schneider Electric One Source QO120CP 20-Amp 1-Pole Plug Circuit Breaker, Pack of 1
+$13.97
+15 = Cutler Hammer CHF120 Circuit Breaker, 1-Pole 20-Amp
+$13.45
+16 = Eaton Cutler-Hammer Single-Pole BR Type Circuit Breaker, 20-Amp, 120/240-Volt
+$9.99
+17 = UBITBA115L-New Challenger MH115-L Type A Replacement. One Pole 15 Amp Left Clip Circuit Breaker Manufactured by Connecticut Electric.
+$18.70
+18 = Square D QO130 Plug-In Mount Standard Miniature Circuit Breaker 1-Pole 30 Amp 120/240 Volt AC QO
+$13.95
+19 = Homeline Single Pole Miniature Circuit Breaker (120V, 50A)
+$18.45
+20 = Cutler Hammer 30 Amp Single Pole Circuit Breaker CHF130
+$23.00
+21 = UBITBA120R-New Challenger MH120R Type A Replacement. One Pole 20 Amp Right Clip Circuit Breaker Manufactured by Connecticut Electric.
+$23.74
+22 = UBIA20NI-New Wadsworth Type A Replacement.1 Pole 20 Amp Circuit Breaker Manufactured by Connecticut Electric , Grey
+$56.61
+23 = Square D by Schneider Electric QO115CP Circuit Breaker, Black
+$13.85
+24 = GE Plug in Circuit Breaker, THQL, Number of Poles 1, 15 Amps, 120/240VAC, Standard
+$16.25
+25 = GE GIDDS-608007 608007 Single Pole 1/2" Thqp Breaker 20A
+$12.24
+26 = GE Plug in Circuit Breaker, THQL, Number of Poles 1, 20 Amps, 120/240VAC, Standard
+$15.45
+27 = Circuit Breaker, 30A, 1P, 10Ka, 120Vac
+$13.50
+28 = UBIZ20-New Zinsco Q20 Replacement. One Pole 20 Amp Thick Series Manufactured By Connecticut Electric.
+$38.86
+29 = Q130H 30-Amp Single Pole 22kA Type QPH Circuit Breaker
+$27.62
+30 = Connecticut Electric UBIZ15 Newly Manufactured Zinsco Q15 Replacement, One Pole 15 Amp Thick Series Circuit Breaker, Gray
+$23.75
